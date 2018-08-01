@@ -62,28 +62,6 @@
 		nav a:hover {
 			color: #fff;
 		}
-
-		h2{
-			font-size:48px;
-			color:white;
-			font-family: Lato;
-			font-weight: 700;
-			text-shadow: 1px 1px 1px #666;
-			margin:50px 0;
-			text-align: left;
-		}
-
-		section{
-			padding: 20px;
-			position:relative;
-		}
-		.section-content{
-			margin: auto;
-			width: 133vh;
-			max-width:960px;
-			min-width:540px;
-			min-height: 100vh;
-		}
 		#title{
 
 		}
@@ -115,6 +93,23 @@
 			top:33%;
 			width:100%;
 		}
+		h2{
+			font-size:80px;
+			color:white;
+			font-family: Lato;
+			font-weight: 700;
+			text-shadow: 1px 1px 1px #777;
+			margin:70px 0 100px 0;
+			letter-spacing:0.4rem;
+		}
+		h2 svg{
+			height:40px;
+			width:40px;
+			fill:white;
+		}
+		.flipped{
+        	transform: rotate(180deg);
+		}
 		p{
 			font-family: Lato;
 			font-weight:300;
@@ -122,7 +117,17 @@
 			line-height:24px;
 			text-align: left;
 		}
-
+		section{
+			padding: 20px;
+			position:relative;
+		}
+		.section-content{
+			margin: auto;
+			width: 133vh;
+			max-width:960px;
+			min-width:540px;
+			min-height: 100vh;
+		}
 		#ep-info{
 			background:#eee;
 			background: linear-gradient(#13b5a9, #a5b9bc 40%);
@@ -233,13 +238,27 @@
 			<section id="ep-info"> 
 				<div class="section-content">
 					<a name="ep-info"> 
-						<h2> debut ep: neon girl</h2>
+						<h2>
+							<svg version="1.1" viewBox="0 0 55 55">
+								<path d="M52.66,0.249c-0.216-0.189-0.501-0.275-0.789-0.241l-31,4.011C20.373,4.084,20,4.507,20,5.01v6.017v4.212v25.384
+									C18.174,38.428,15.273,37,12,37c-5.514,0-10,4.037-10,9s4.486,9,10,9s10-4.037,10-9c0-0.232-0.019-0.46-0.039-0.687
+									C21.974,45.248,22,45.189,22,45.121V16.118l29-3.753v18.257C49.174,28.428,46.273,27,43,27c-5.514,0-10,4.037-10,9s4.486,9,10,9
+									c5.464,0,9.913-3.966,9.993-8.867c0-0.013,0.007-0.024,0.007-0.037V11.227V7.016V1C53,0.712,52.876,0.438,52.66,0.249z"/>
+							</svg>
+							<span>  music </span>
+							<svg class="flipped" version="1.1" viewBox="0 0 55 55">
+								<path d="M52.66,0.249c-0.216-0.189-0.501-0.275-0.789-0.241l-31,4.011C20.373,4.084,20,4.507,20,5.01v6.017v4.212v25.384
+									C18.174,38.428,15.273,37,12,37c-5.514,0-10,4.037-10,9s4.486,9,10,9s10-4.037,10-9c0-0.232-0.019-0.46-0.039-0.687
+									C21.974,45.248,22,45.189,22,45.121V16.118l29-3.753v18.257C49.174,28.428,46.273,27,43,27c-5.514,0-10,4.037-10,9s4.486,9,10,9
+									c5.464,0,9.913-3.966,9.993-8.867c0-0.013,0.007-0.024,0.007-0.037V11.227V7.016V1C53,0.712,52.876,0.438,52.66,0.249z"/>
+							</svg>
+						</h2>
 						<div id="ep-content" style="">
 							<img id="album-cover" height="400" src="./media/images/neon-girl-cover.jpg">
 							<div id="ep-playlist-info">
-								<iframe src="https://open.spotify.com/embed/album/7xWGen2ox4vfuSVVH5zWCm" width="300" height="235" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+								<iframe src="https://open.spotify.com/embed/album/7xWGen2ox4vfuSVVH5zWCm" width="350" height="235" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 								<p>
-									Now available on all streaming platforms!
+									Debut EP, Neon Girl, now available on all streaming platforms!
 								</p>
 								<ul class="icons">
 									<li>
