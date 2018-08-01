@@ -8,7 +8,6 @@
 		* { margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline; box-sizing:border-box; }
 		body {
 			line-height: 1;
-			background: no-repeat top center/100% url(media/images/title.jpg);
 			text-align:center;
 		}
 		svg {
@@ -17,8 +16,10 @@
 		}
 		header {
 			background: #ffffff77;
-		}
-		
+			z-index: 100;
+			position: fixed;
+			width: 100%;
+		}	
 		#header-container {
 			max-width:720px;
 			min-width:540px;
@@ -48,16 +49,6 @@
 			top: 15px;
 			right: 20px;
 		}
-		
-		h1{
-			font-size:96px;
-			color:white;
-			margin-top:200px;
-			font-weight: bold;
-			font-family: Avenir;
-			text-transform: uppercase;
-			text-shadow: 4px 4px 4px #444;
-		}
 		nav a {
 			text-decoration: none;
 			color: pink;
@@ -80,19 +71,92 @@
 		}
 
 		section{
-			margin:20px auto;
-			max-width:720px;
+			padding: 20px;
+		}
+		.section-content{
+			padding-top:100px;
+			margin: auto;
+			max-width:900px;
 			min-width:540px;
+			min-height: 100vh;
 		}
 		#title{
+
+		}
+		#title-image-container{
 			max-width:100%;
 			height:100vh;
+			width: 100%;
+			padding-top:0;
+			text-align: center;
+			background: linear-gradient(orange, pink 40%);
+		}
+		#title-image-container img{
+			height: 100vh;
+			min-height:480px;
+			top:0;
+		}
+		h1{
+			font-size:96px;
+			color:white;
+			font-weight: bold;
+			font-family: Avenir;
+			text-transform: uppercase;
+			text-shadow: 3px 3px 3px #444;
+			position:absolute;
+			top:33%;
+			width:100%;
 		}
 		p{
 			font-family: Avenir;
 			font-size:18px;
 			line-height:24px;
 			text-align: left;
+		}
+		#ep-info{
+			background:#ccc;
+		}
+		#ep-playlist-info{
+			width:400px;
+			text-align:left;
+		}
+		#album-cover{
+			vertical-align: top;
+			display:block;
+		}
+		#ep-content {
+			display:flex;
+			flex-wrap:none;
+			justify-content:space-around;
+			align-items: flex-start;
+		}
+		#ep-info p{
+			margin-top:10px;
+		}
+		.block{
+
+		}
+		#biography{
+			background: linear-gradient(orange, pink 40%);
+		}
+		.parallax {
+			perspective: 1px;
+			height: 100vh;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		.xparallax__layer {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		.parallax__layer--base {
+			transform: translateZ(0px);
+		}
+		.parallax__layer--back {
+			transform: translateZ(-1px) scale(2);
 		}
 	</style>
 </head>
@@ -140,77 +204,89 @@
 		</nav>
 		</div>
 	</header>
-	<main>
-		<section id="title">
+	<div class="parallax">
+		<div id="title-image-container" class="parallax__layer parallax__layer--back">
+			<img src="media/images/title.jpg">
 			<a name="title"> 
 				<h1> Alison Cohen </h1>
 			</a>
-		</section>
-		<section id="ep-info"> 
-			<a name="ep-info"> 
-				<h2> neon girl </h2>
-				<img height="500" src="./media/images/neon-girl-cover.jpg"
-				<div>
-					<iframe src="https://open.spotify.com/embed/album/3mH6qwIy9crq0I9YQbOuDf" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+		</div>
+		<main class="parallax__layer parallax__layer--base">
+			<section id="title">
+			</section>
+			<section id="ep-info"> 
+				<div class="section-content">
+					<a name="ep-info"> 
+						<h2> neon girl </h2>
+						<div id="ep-content" style="">
+							<img id="album-cover" height="400" src="./media/images/neon-girl-cover.jpg">
+							<div id="ep-playlist-info">
+								<iframe src="https://open.spotify.com/embed/album/7xWGen2ox4vfuSVVH5zWCm" width="300" height="235" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+								<p>
+									Lorem ipsum dolor sit et amet, vupute minim consectetuer in erat de adipiscing elit, sed de diam nonummy nibheuismod et tincidunt utat laoreet dolore magna aliquam erat volutpat.
+								</p>
+							</div>
+						</div>
+					</a>
 				</div>
-				<p>
-					Lorem ipsum dolor sit et amet, vupute minim consectetuer in erat de adipiscing elit, sed de diam nonummy nibheuismod et tincidunt utat laoreet dolore magna aliquam erat volutpat.
-				</p>
-
-
-			</a>
-		</section>
-		<section id="biography"> 
-			<a name="biography">
-				<h2>bio</h2> 
-				<p> Duis autem vel eum irure en dolor in hendrerit vupute vel velit esse molestie conseqat sequat, vel illum dolore ven eu feugiat nulla facilisis at vero eros et accumsan naet iusto odio dignissim qui vel blandit praesent luptatum zzril delenit augue duis do te feugait nulla facilisi. Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-			</a>
-		</section>
-		<section id="videos"> 
-			<a name="videos"> 
-				<h2>videos</h2>
-				<div>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/O9-B3YoiwPM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>			</a>
+			</section>
+			<section id="biography"> 
+				<div class="section-content">
+					<a name="biography">
+						<h2>bio</h2> 
+						<p> Duis autem vel eum irure en dolor in hendrerit vupute vel velit esse molestie conseqat sequat, vel illum dolore ven eu feugiat nulla facilisis at vero eros et accumsan naet iusto odio dignissim qui vel blandit praesent luptatum zzril delenit augue duis do te feugait nulla facilisi. Ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+					</a>
 				</div>
-		</section>
-		<section id="live-shows"> 
-			<a name="live-shows">
-				<h2>live shows</h2>
-			</a>
-			<table>
-				<thead>
-					<tr>
-						<th>
-							Date
-						</th>
-						<th>
-							City
-						</th>
-						<th>
-							Venue
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Jul 12, 2018</td>
-						<td>Seattle, WA</td>
-						<td>Showbox</td>
-					</tr>
-					<tr>
-						<td>Aug 23, 2018</td>
-						<td>Miami, FL</td>
-						<td>Tea &amp; Poets</td>
-					</tr>
-					<tr>
-						<td>Oct 15, 2018</td>
-						<td>New York, NY</td>
-						<td>CBGB</td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
-	</main>
+			</section>
+			<section id="videos">
+				<div class="section-content"> 
+					<a name="videos"> 
+						<h2>videos</h2>
+						<div>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/O9-B3YoiwPM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>			</a>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section id="live-shows"> 
+				<a name="live-shows">
+					<h2>live shows</h2>
+				</a>
+				<table>
+					<thead>
+						<tr>
+							<th>
+								Date
+							</th>
+							<th>
+								City
+							</th>
+							<th>
+								Venue
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Jul 12, 2018</td>
+							<td>Seattle, WA</td>
+							<td>Showbox</td>
+						</tr>
+						<tr>
+							<td>Aug 23, 2018</td>
+							<td>Miami, FL</td>
+							<td>Tea &amp; Poets</td>
+						</tr>
+						<tr>
+							<td>Oct 15, 2018</td>
+							<td>New York, NY</td>
+							<td>CBGB</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</main>
+	</div>
 	<footer>
 	</footer>
 </body>
