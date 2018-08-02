@@ -66,6 +66,7 @@
 
 		}
 		#home-image-container{
+			position: relative;
 			max-width:100%;
 			height:100vh;
 			width: 100%;
@@ -81,6 +82,24 @@
 			left:50%;
 			margin-left:-67vh;
 		}
+		#link-music{
+			position:absolute;
+			bottom:2vh;
+			height:7vh;
+			width: 7vh;
+			left:50%;
+			margin-left:-3.5vh;
+			fill:white;
+			cursor:pointer;
+		}
+		#link-music:hover{
+			fill:hotpink;
+		}
+		#link-music svg{
+			height:7vh;
+			width: 7vh;
+		}
+
 		h1{
 			font-size:11vh;
 			color:white;
@@ -245,10 +264,15 @@
 		</div>
 	</header>
 	<div class="parallax">
-		<a name="home"> 
+		<a id="home" name="home"> 
 			<div id="home-image-container" class="parallax__layer parallax__layer--back">
 				<img src="media/images/home.jpg">
 				<h1> Alison Cohen </h1>
+				<div id="link-music" href="#music">
+					<svg version="1.1" viewBox="0 0 129 129">
+					    <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
+					</svg>
+				</div>
 			</div>
 		</a>
 		<main class="parallax__layer parallax__layer--base">
@@ -441,4 +465,15 @@
 	</div>
 	<footer>
 	</footer>
+
+	<script>
+	(function() {
+		function navigateToMusic() {
+		    window.location.hash = "#music";
+		}
+
+		let $linkMusic = document.getElementById('link-music');
+		$linkMusic.addEventListener('click', navigateToMusic);
+	})();
+	</script>
 </body>
