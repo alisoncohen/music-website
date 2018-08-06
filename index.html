@@ -83,7 +83,15 @@
 			min-height:100vh;
 			background:linear-gradient(orange, pink 40%);
 			z-index: 200;
-			display:none;
+			transition: all 250ms linear;
+		}
+		.menu-hidden {
+			opacity: 1;
+			transform: translateX(100%);
+		}
+		.menu-shown {
+			opacity: 1;
+			transform: translateX(0);
 		}
 		#menu-container a{
 			font-size:32px;
@@ -92,6 +100,25 @@
 			text-decoration: none;
 		}
 		#menu-container a:hover{
+
+		}
+
+		#menu-container li {
+			list-style-type: none;
+		}
+		.menu-title{
+			font-size: 24px;
+			color:white;
+			line-height:48px;
+			margin:13px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+		#close-btn{
+			position:fixed;
+			top:13px;
+			right:20px;
+			fill:#444;
 
 		}
 
@@ -202,7 +229,6 @@
 			align-items: flex-start;
 		}
 		#music p{
-			text-align:center;
 			margin-left:35px
 		}
 		#music-title-text{
@@ -210,6 +236,7 @@
 			line-height: 1.5;
 			font-weight: 900;
 			color:#ddd;
+			margin-top:20px;
 		}
 		#music-text{
 			font-size:20px;
@@ -217,21 +244,10 @@
 			line-height: 1.3;
 		}
 		#music ul{
-			margin-left:35px	;
+			margin-left: -50px	;
 		}
 		#music iframe{
-			margin-top:20px;
 			margin-left:25px;
-		}
-		#videos{
-			background: linear-gradient(#65cd08, #a7bca5 60%);
-		}
-		#live-shows{
-			background: linear-gradient(#9f92cb, #cb92ca 40%);
-
-		}
-		.block{
-
 		}
 		#about{
 			background: linear-gradient(orange, pink 40%);
@@ -239,6 +255,29 @@
 		#about p{
 			margin-top:-20px;
 			margin-bottom:50px;
+		}
+		#videos{
+			background: linear-gradient(#65cd08, #a7bca5 60%);
+		}
+		#videos p{
+			text-align: center;
+			margin-top:20px;
+			padding-bottom:7px;
+			padding-top:5px;
+			margin-left:200px;
+			background: pink;
+		}
+		#videos a{
+			text-decoration: none;
+			color:white;
+		}
+		#main-video{
+			margin-top:-15px;
+			margin-bottom:20px	;
+		}
+		#live-shows{
+			background: linear-gradient(#9f92cb, #cb92ca 40%);
+
 		}
 		.parallax {
 			perspective: 1px;
@@ -347,16 +386,24 @@
 	</header>
 
 
-	<div id="menu-container">
-		<div>
+	<div id="menu-container" class="menu-hidden">
+		<div class="menu-title">
 			Alison Cohen
 		</div>
+		<div id="close-btn">
+			<svg viewBox="0 0 22.88 22.88">
+				<path d="M0.324,1.909c-0.429-0.429-0.429-1.143,0-1.587c0.444-0.429,1.143-0.429,1.587,0l9.523,9.539
+				l9.539-9.539c0.429-0.429,1.143-0.429,1.571,0c0.444,0.444,0.444,1.159,0,1.587l-9.523,9.524l9.523,9.539
+				c0.444,0.429,0.444,1.143,0,1.587c-0.429,0.429-1.143,0.429-1.571,0l-9.539-9.539l-9.523,9.539c-0.444,0.429-1.143,0.429-1.587,0
+				c-0.429-0.444-0.429-1.159,0-1.587l9.523-9.539L0.324,1.909z"/>
+			</svg>
+		</div>
 		<ul>
-			<li><a href="#home">home</a></li>
-			<li><a href="#music">music</a></li>
-			<li><a href="#about">about</a></li>
-			<li><a href="#videos">vidoes</a></li>
-			<li><a href="#live-shows">live-shows</a></li>
+			<li><a class="menu-item" href="#home">home</a></li>
+			<li><a class="menu-item" href="#music">music</a></li>
+			<li><a class="menu-item" href="#about">about</a></li>
+			<li><a class="menu-item" href="#videos">vidoes</a></li>
+			<li><a class="menu-item" href="#live-shows">live-shows</a></li>
 		</ul>
 	</div>
 	<div class="parallax">
@@ -393,6 +440,7 @@
 						<div id="ep-content" style="">
 							<img id="album-cover" height="400" src="./media/images/neon-girl-cover.jpg">
 							<div id="ep-playlist-info">
+								<iframe src="https://open.spotify.com/embed/album/7xWGen2ox4vfuSVVH5zWCm" width="350" height="235" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 								<p id="music-title-text">
 									Debut EP, Neon Girl
 								</p>
@@ -426,7 +474,6 @@
 										</a>
 									</li>
 								</ul>
-								<iframe src="https://open.spotify.com/embed/album/7xWGen2ox4vfuSVVH5zWCm" width="350" height="235" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 							</div>
 						</div>
 					</a>
@@ -518,6 +565,9 @@
 							<iframe width="280" height="157" src="https://www.youtube.com/embed/JpJteRkG22M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							<iframe width="280" height="157" src="https://www.youtube.com/embed/O9-B3YoiwPM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</a>
+					<p>
+						<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> watch more</a>
+					</p>
 				</div>
 			</section>
 			<section id="live-shows"> 
@@ -569,9 +619,27 @@
 		function navigateToMusic() {
 		    window.location.hash = "#music";
 		}
-
+		function showMenu() {
+			let $menu = document.getElementById('menu-container');
+			$menu.className = 'menu-shown';
+		}
+		function hideMenu() {
+			let $menu = document.getElementById('menu-container');
+			$menu.className = 'menu-hidden';
+		}
 		let $linkMusic = document.getElementById('link-music');
 		$linkMusic.addEventListener('click', navigateToMusic);
+
+		let $menuBtn = document.getElementById('menu-btn');
+		$menuBtn.addEventListener('click', showMenu);
+
+		let $closeBtn = document.getElementById('close-btn');
+		$closeBtn.addEventListener('click', hideMenu)
+
+		let $menuItems = document.getElementsByClassName("menu-item");
+		for (let $menuItem of $menuItems) {
+			$menuItem.addEventListener('click', hideMenu);
+		}
 	})();
 	</script>
 </body>
