@@ -222,8 +222,8 @@
 		}
 		#ep-playlist-info{
 			width:400px;
-			margin-left:50px;
 			text-align:center;
+			margin-left:50px;
 		}
 		#album-cover{
 			vertical-align: top;
@@ -234,9 +234,7 @@
 			flex-wrap:none;
 			justify-content:center;
 			align-items: flex-start;
-		}
-		#music p{
-			margin-left:35px
+			flex-flow: row wrap;
 		}
 		#music-title-text{
 			text-align:center;
@@ -252,12 +250,7 @@
 			margin-bottom:18px;
 			line-height: 1.3;
 		}
-		#music ul{
-			margin-left:20px;	
-		}
-		#music iframe{
-			margin-left:25px;
-		}
+
 		#about{
 			background: linear-gradient(orange, pink 40%);
 		}
@@ -360,6 +353,27 @@
 			.section-svg{
 				height:3.3vw;
 				width:3.3vw;
+			}
+		}
+		@media(max-width: 1063px){
+			#music ul{
+				margin-left:0px
+			}
+			#ep-playlist-info{
+				margin:30px;
+			}
+			#music iframe {
+    			margin-left: 0px;
+			}
+			#album-cover {
+				width:40vw;
+				height:auto;
+			}
+		}
+		@media(max-width: 885px){
+			#album-cover {
+				width:350px;
+				height:auto;
 			}
 		}	
 		@media (max-width:750px){
