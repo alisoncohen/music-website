@@ -257,6 +257,7 @@
 		#about p{
 			margin-top:-20px;
 			margin-bottom:50px;
+			text-align: justify;
 		}
 		#videos{
 			background: linear-gradient(#65cd08, #a7bca5 60%);
@@ -282,7 +283,10 @@
 		}
 		#main-video{
 			margin-top:-15px;
-			margin-bottom:20px	;
+			margin-bottom:20px;
+		}
+		#main-video-small{
+			display:none;
 		}
 		#live-shows{
 			background: linear-gradient(#9f92cb, #cb92ca 40%);
@@ -355,25 +359,31 @@
 				width:3.3vw;
 			}
 		}
-		@media(max-width: 1063px){
+		@media(max-width: 1064px){
 			#music ul{
 				margin-left:0px
 			}
 			#ep-playlist-info{
 				margin:30px;
+				width:425.59px;
 			}
+
 			#music iframe {
     			margin-left: 0px;
+    			width:40vw;
 			}
 			#album-cover {
 				width:40vw;
 				height:auto;
 			}
 		}
-		@media(max-width: 885px){
+		@media(max-width: 754px){
 			#album-cover {
-				width:350px;
+				width:300px;
 				height:auto;
+			}
+			#music iframe{
+				width:300px;
 			}
 		}	
 		@media (max-width:750px){
@@ -384,6 +394,19 @@
 			.section-svg{
 				height:25px;
 				width:25px;
+			}
+		}
+
+		@media (max-width: 970px){
+			#about img{
+				width:500px;
+				height:auto;
+			}
+			#main-video{
+				display:none;
+			}
+			#main-video-small{
+				display:inline;
 			}
 		}
 
@@ -614,6 +637,9 @@
 						</h2>	
 						<div id="main-video">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/JpJteRkG22M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						</div>
+						<div id="main-video-small">
+							<iframe width="280" height="157" src="https://www.youtube.com/embed/JpJteRkG22M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 						</div>
 						<div id="other-videos">
 							<iframe width="280" height="157" src="https://www.youtube.com/embed/zCfjFprpz7E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
