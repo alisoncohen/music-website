@@ -262,20 +262,20 @@
 		#videos{
 			background: linear-gradient(#65cd08, #a7bca5 60%);
 		}
-		#button{
+		.button{
 			text-align: center;
 			font-size:24px;
 			font-weight: 500;
 			margin:60px 0;
 		}
-		#button a{
+		.button a{
 			text-decoration: none;
 			padding: 9px 25px 12px 25px;
 			border-radius:5px;
 			color:white;
 			background: #b58bb0;
 		}
-		#button a:hover{
+		.button a:hover{
 			background:white;
 			color:#b58bb0;
 
@@ -292,6 +292,23 @@
 			background: linear-gradient(#9f92cb, #cb92ca 40%);
 
 		}
+		#live-shows table{
+			border-collapse: collapse;
+			text-align:left;
+
+		}
+		#live-shows td, th{
+			border-bottom:1px solid #fff;
+			padding:0.5rem;
+		}
+		#live-shows th{
+			display:none;
+		}
+		.date {
+			border-right:1px solid #fff;
+			text-align: right;
+		}
+
 		.parallax {
 			perspective: 1px;
 			height: 100vh;
@@ -399,7 +416,7 @@
 
 		@media (max-width: 970px){
 			#about img{
-				width:500px;
+				width:300px;
 				height:auto;
 			}
 			#main-video{
@@ -614,6 +631,7 @@
 						<img src="./media/images/piano-cropped.jpg" height="300" class="flipped">
 						<img src="./media/images/band-1.jpg" height="332">
 						<img src="./media/images/singing-1.png" height="332" class="flipped">
+						<img src="./media/images/guitar-pic.png" height="500">
 			
 					</a>
 				</div>
@@ -646,7 +664,7 @@
 							<iframe width="280" height="157" src="https://www.youtube.com/embed/JpJteRkG22M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							<iframe width="280" height="157" src="https://www.youtube.com/embed/O9-B3YoiwPM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</a>
-					<p id="button">
+					<p class="button">
 						<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> watch more</a>
 					</p>
 				</div>
@@ -659,32 +677,60 @@
 					<table>
 						<thead>
 							<tr>
-								<th>
+								<th class="date">
 									Date
 								</th>
-								<th>
+								<th class="city">
 									City
 								</th>
-								<th>
+								<th class="venue">
 									Venue
+								</th>
+								<th class="price">
+									Price
 								</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Jul 12, 2018</td>
-								<td>Seattle, WA</td>
-								<td>Showbox</td>
+								<td class="date">Jul 12, 2018</td>
+								<td class="location">
+									<div class="venue"> Showbox </div>
+									<div class="city"> Seattle </div>
+								</td>
+								<td class="price"> $12 </td>
+								<td class="address">
+									<div class="button">
+										<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> adress</a>
+									</div>
+								</td>
 							</tr>
 							<tr>
-								<td>Aug 23, 2018</td>
-								<td>Miami, FL</td>
-								<td>Tea &amp; Poets</td>
+								<td class="date">Aug 23, 2018</td>
+								<td class="location">
+									<div class="venue"> Tea &amp; Poets </div>
+									<div class="city"> Miami, FL </div>
+								</td>
+								<td class="price"> free </td>
+								<td class="address">
+									<div class="button">
+										<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> adress</a>
+									</div>
+								</td>
+		
 							</tr>
 							<tr>
-								<td>Oct 15, 2018</td>
-								<td>New York, NY</td>
-								<td>CBGB</td>
+								<td class="date">Oct 15, 2018</td>
+								<td class="location">
+									<div class="venue"> CBGB </div>
+									<div class="city"> New York, NY </div>
+								</td>
+								<td class="price"> $5 </td>
+								<td class="address">
+									<div class="button">
+										<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> adress</a>
+									</div>
+								</td>
 							</tr>
 						</tbody>
 					</table>
