@@ -259,6 +259,13 @@
 			margin-bottom:50px;
 			text-align: justify;
 		}
+		#about-images{
+			display:inline-flex;			
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: flex-start;
+			margin: 0 -50px;
+		}
 		#videos{
 			background: linear-gradient(#65cd08, #a7bca5 60%);
 		}
@@ -266,7 +273,6 @@
 			text-align: center;
 			font-size:24px;
 			font-weight: 500;
-			margin:60px 0;
 		}
 		.button a{
 			text-decoration: none;
@@ -278,8 +284,9 @@
 		.button a:hover{
 			background:white;
 			color:#b58bb0;
-
-
+		}
+		#watch-more{
+			margin:60px 0;
 		}
 		#main-video{
 			margin-top:-15px;
@@ -295,21 +302,29 @@
 		#live-shows table{
 			border-collapse: collapse;
 			text-align:left;
+			vertical-align: middle;
+			margin:auto;
 
 		}
 		#live-shows td, th{
 			border-bottom:1px solid #fff;
-			padding:2rem;
+			padding:3rem;
 			font-size:20px;
 		}
 		#live-shows th{
 			display:none;
 		}
+		#last-row td{
+			border-bottom:none;
+		}
 		.date {
 			border-right:1px solid #fff;
 			text-align: right;
 		}
-
+		.city {
+			font-style: italic;
+			color:#fff;
+		}
 		.parallax {
 			perspective: 1px;
 			height: 100vh;
@@ -468,7 +483,7 @@
 				<li><a href="#home">home</a></li>
 				<li><a href="#music">music</a></li>
 				<li><a href="#about">about</a></li>
-				<li><a href="#videos">vidoes</a></li>
+				<li><a href="#videos">videos</a></li>
 				<li><a href="#live-shows">live-shows</a></li>
 			</ul>
 		</nav>
@@ -498,7 +513,7 @@
 			<li><a class="menu-item" href="#home">home</a></li>
 			<li><a class="menu-item" href="#music">music</a></li>
 			<li><a class="menu-item" href="#about">about</a></li>
-			<li><a class="menu-item" href="#videos">vidoes</a></li>
+			<li><a class="menu-item" href="#videos">videos</a></li>
 			<li><a class="menu-item" href="#live-shows">live-shows</a></li>
 		</ul>
 	</div>
@@ -613,27 +628,25 @@
 							</svg>
 						</h2> 
 						<p>
-							Through hooky songs with meaningful lyrics, electro-pop singer songwriter Alison Cohen
-							stands out from the crowd. Alison is a true artist and her debut EP, Neon Girl,
-							reflects that completely. Each song is filled with descriptive lyrical images,
-							catchy melodies and synth parts that take you back to the 1980s.
-							Alison was involved with each part of the creative process.
-							She wrote the songs, arranged them, and almost entirely self-produced her EP. 
-							</br>
-							</br>
-							At the University of Miami,
-							Alison is studying Musicianship Artistry Development and Entrepreneurship
-							with minors in Creative American Music and Music Business.
-							She sings, plays the piano, the guitar, and sometimes the bass.
-							She is also pursuing a computer science major.
-							Alison was born and raised in Seattle and splits her time between there and Miami. 
+							Alison Cohen is a Seattle-born and Miami-based singer-songwriter, 
+							producer and multi-instrumentalist studying at the Frost School of Music at the 
+							University of Miami. <br><br>
+
+							Her music blends the sounds of 80s synth pop with elements of today’s bedroom pop. 
+							She tells personal stories through visceral lyrics that paint colorful mental images.
+							Alison’s sound can be compared to 80s artists such as Madonna and Tears for Fears 
+							as well as modern artists such as Lorde, SG Lewis and Clairo. <br><br>
+
+							Alison’s debut EP, Neon Girl, will be released in November 2018.
+									
 						</p>
-						<img src="./media/images/piano-5.jpg" height="300">
-						<img src="./media/images/piano-cropped.jpg" height="300" class="flipped">
-						<img src="./media/images/band-1.jpg" height="332">
-						<img src="./media/images/singing-1.png" height="332" class="flipped">
-						<img src="./media/images/guitar-pic.png" height="500">
-			
+						<div id="about-images">
+								<img src="./media/images/piano-5.jpg" height="300">
+								<img src="./media/images/piano-cropped.jpg" height="300" class="flipped">
+								<img src="./media/images/guitar-1.jpg" height="300">
+								<img src="./media/images/band-1.jpg" height="332">
+								<img src="./media/images/singing-1.png" height="332" class="flipped">
+						</div>
 					</a>
 				</div>
 			</section>
@@ -665,7 +678,7 @@
 							<iframe width="280" height="157" src="https://www.youtube.com/embed/JpJteRkG22M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							<iframe width="280" height="157" src="https://www.youtube.com/embed/O9-B3YoiwPM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</a>
-					<p class="button">
+					<p class="button" id="watch-more">
 						<a href="https://www.youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5Bg"> watch more</a>
 					</p>
 				</div>
@@ -702,7 +715,7 @@
 								<td class="price"> $12 </td>
 								<td class="address">
 									<div class="button">
-										<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> adress</a>
+										<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> address</a>
 									</div>
 								</td>
 							</tr>
@@ -715,12 +728,12 @@
 								<td class="price"> free </td>
 								<td class="address">
 									<div class="button">
-										<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> adress</a>
+										<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> address</a>
 									</div>
 								</td>
 		
 							</tr>
-							<tr>
+							<tr id="last-row">
 								<td class="date">Oct 15, 2018</td>
 								<td class="location">
 									<div class="venue"> CBGB </div>
@@ -729,7 +742,7 @@
 								<td class="price"> $5 </td>
 								<td class="address">
 									<div class="button">
-										<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> adress</a>
+										<a href="Youtube.com/channel/UCiz_dPrQ75YvFOMix7BV5B"> address</a>
 									</div>
 								</td>
 							</tr>
