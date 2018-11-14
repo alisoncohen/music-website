@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 	<style>
-		* { margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline; box-sizing:border-box; font-family:Lato, sans-serif;}
+		* { margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline; box-sizing:border-box; font-family:Lato, sans-serif; -webkit-overflow-scrolling: touch}
 		body {
 			line-height: 1;
 			text-align:center;
@@ -21,7 +21,6 @@
 			position: fixed;
 			width: 100%;
 		}
-
 		#header-container {
 			max-width:133vh;
 			min-width:540px;
@@ -755,10 +754,12 @@
 							<svg class="section-svg" aria-labelledby="simpleicons-youtube-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title id="simpleicons-youtube-icon">YouTube icon</title><path class="a" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
 						</h2>	
 						<div id="main-video">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/JpJteRkG22M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<div class="embed-responsive embed-responsive-21by9">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/JpJteRkG22M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="overflow:hidden"></iframe>
+							</div>
 						</div>
 						<div id="main-video-small">
-							<iframe width="280" height="157" src="https://www.youtube.com/embed/JpJteRkG22M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							<iframe width="280" height="157" src="https://www.youtube.com/embed/JpJteRkG22M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> </iframe>
 						</div>
 						<div id="other-videos">
 							<iframe width="280" height="157" src="https://www.youtube.com/embed/zCfjFprpz7E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
