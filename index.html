@@ -142,6 +142,7 @@
 			padding-top:0;
 			text-align: center;
 			background: linear-gradient(orange, pink 40%);
+			overflow-x:hidden;
 		}
 		#home-image-container img{
 			height: 100vh;
@@ -359,13 +360,6 @@
 				overflow-x: hidden;
 				overflow-y: auto;
 			}
-			.xparallax__layer {
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-			}
 			.parallax__layer--base {
 				transform: translateZ(0px);
 			}
@@ -373,6 +367,7 @@
 				transform: translateZ(-1px) scale(2);
 			}
 		}
+
 		@media (max-height: 480px) {
 			#home-image-container{
 				height: 480px;
@@ -395,7 +390,7 @@
 				font-size: 52px;
 			}
 		}
-		@media (max-width: 760px) {
+		@media (max-width: 760px){
 			nav{
 				display:none;
 			}
@@ -890,6 +885,10 @@
 		let $menuItems = document.getElementsByClassName("menu-item");
 		for (let $menuItem of $menuItems) {
 			$menuItem.addEventListener('click', hideMenu);
+		}
+		if ($('body').hasClass('mobile')) {
+		  var viewportHeight = $('#home-image-container').outerHeight();
+		  $('#home-image-container').css({ height: viewportHeight });
 		}
 	})();
 	</script>
