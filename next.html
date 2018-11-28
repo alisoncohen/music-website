@@ -2,12 +2,22 @@
 <html lang="en">
 
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129417724-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+  	gtag('config', 'UA-129417724-1');
+	</script>
+	<!-- END Global site tag (gtag.js) - Google Analytics -->
+
 	<title> Alison Cohen - Neon Girl</title>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 	<style>
-		* { margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline; box-sizing:border-box; font-family:Lato, sans-serif; -webkit-overflow-scrolling: touch; overflow-x: hidden}
+		* { margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline; box-sizing:border-box; font-family:Lato, sans-serif; -webkit-overflow-scrolling: touch;}
 		body {
 			line-height: 1;
 			text-align:center;
@@ -132,7 +142,7 @@
 			width:20px;
 		}
 		#home{
-
+			
 		}
 
 		#home-image-container{
@@ -152,6 +162,7 @@
 			position:absolute;
 			left:50%;
 			margin-left:-67vh;
+			overflow-x: hidden
 		}
 
 		#link-music{
@@ -198,6 +209,12 @@
 			width:40px;
 			fill:white;
 		}
+		h3{
+			font-size:20px;
+			margin-bottom:30px;
+			color:#b58bb0;
+			text-shadow: 0.5px 0.5px 0.5px #aaa;
+		}
 		.flipped{
         	transform: scaleX(-1);
 		}
@@ -218,18 +235,21 @@
 			max-width:960px;
 			min-width:540px;
 			min-height: 100vh;
+			overflow-x:hidden;
 		}
 		#music{
 			background:#eee;
 			background: linear-gradient(#13b5a9, #a5b9bc 40%);
 		}
 		#ep-playlist-info{
-			display:none;
 		}
 		.ep-playlist-info{	
 			width:400px;
 			text-align:center;
 			margin-left:50px;
+		}
+		#ep-coming-info{
+			display:none;
 		}
 		#ep-coming-info img{
 			border:5px solid #ddd;
@@ -264,9 +284,11 @@
 			background: linear-gradient(orange, pink 40%);
 		}
 		#about p{
-			margin-top:-20px;
 			margin-bottom:50px;
 			text-align: justify;
+		}
+		#about-p{
+			margin-top:-20px;
 		}
 		#about-images{
 			display:inline-flex;			
@@ -534,12 +556,12 @@
 						</a>
 					</li>
 					<li>
-						<a href="https://distrokid.com/hyperfollow/alisoncohen/fpCs">
+						<a href="https://open.spotify.com/album/51j1o7GPn2luZxPK88Sz0Y?si=5aMjgEfeSLGsthovPJMq-Q">
 							<svg aria-labelledby="simpleicons-spotify-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-spotify-icon">Spotify icon</title><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> 
 						</a>
 					</li>
-					<li style="display: none">
-						<a href="https://itunes.com"> 
+					<li>
+						<a href="https://itunes.apple.com/us/album/neon-girl-ep/1443220014"> 
 							<svg aria-labelledby="simpleicons-applemusic-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-applemusic-icon">Apple Music icon</title><path d="M23.997 6.124c0-.738-.065-1.47-.24-2.19-.317-1.31-1.062-2.31-2.18-3.043C21.003.517 20.373.285 19.7.164c-.517-.093-1.038-.135-1.564-.15-.04-.003-.083-.01-.124-.013H5.988c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.475 3.208c-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.802.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03c.525 0 1.048-.034 1.57-.1.823-.106 1.597-.35 2.296-.81.84-.553 1.472-1.287 1.88-2.208.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536-.142-.773.227-1.624 1.038-2.022.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516.014-.063.02-.13.02-.193 0-1.815 0-3.63-.002-5.443 0-.062-.01-.125-.026-.185-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.326.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.443-.088.664-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></svg>
 						</a>
 					</li>
@@ -632,7 +654,7 @@
 							</p>
 							<ul class="icons" class="music-icons">
 								<li>
-									<a href="https://distrokid.com/hyperfollow/alisoncohen/fpCs">
+									<a href="https://open.spotify.com/album/51j1o7GPn2luZxPK88Sz0Y?si=WW6oLyHLRt6sZ4-VlI7tzg">
 										<svg aria-labelledby="simpleicons-spotify-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-spotify-icon2">Spotify icon</title><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> 
 									</a>
 								</li>
@@ -650,7 +672,7 @@
 							</ul>
 						</div>
 						<div id="ep-playlist-info" class="ep-playlist-info">
-							<iframe src="https://open.spotify.com/embed/album/7xWGen2ox4vfuSVVH5zWCm" width="350" height="235" allow="encrypted-media"></iframe>
+							<iframe src="https://open.spotify.com/embed/album/51j1o7GPn2luZxPK88Sz0Y" width="350" height="235" allow="encrypted-media"></iframe>
 							<p class="music-title-text">
 								Debut EP, Neon Girl
 							</p>
@@ -659,17 +681,17 @@
 							</p>
 							<ul class="icons" class="music-icons">
 								<li>
-									<a href="https://spotify.com">
+									<a href="https://open.spotify.com/album/51j1o7GPn2luZxPK88Sz0Y?si=rZ0y3Fp4TPaSn3_QlqYn_Q">
 										<svg aria-labelledby="simpleicons-spotify-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-spotify-icon3">Spotify icon</title><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> 
 									</a>
 								</li>
 								<li>
-									<a href="https://itunes.com"> 
+									<a href="https://itunes.apple.com/us/album/neon-girl-ep/1443220014"> 
 										<svg aria-labelledby="simpleicons-applemusic-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-applemusic-icon">Apple Music icon</title><path d="M23.997 6.124c0-.738-.065-1.47-.24-2.19-.317-1.31-1.062-2.31-2.18-3.043C21.003.517 20.373.285 19.7.164c-.517-.093-1.038-.135-1.564-.15-.04-.003-.083-.01-.124-.013H5.988c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.004.958 1.04 1.88.475 3.208c-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.802.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03c.525 0 1.048-.034 1.57-.1.823-.106 1.597-.35 2.296-.81.84-.553 1.472-1.287 1.88-2.208.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536-.142-.773.227-1.624 1.038-2.022.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516.014-.063.02-.13.02-.193 0-1.815 0-3.63-.002-5.443 0-.062-.01-.125-.026-.185-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.326.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.443-.088.664-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></svg>
 									</a>
 								</li>
 								<li>
-									<a href="https://googleplay.com">
+									<a href="https://play.google.com/store/music/album/Alison_Cohen_Neon_Girl?id=Bdlgsndjr74vynput6xw3qhvxem">
 										<svg aria-labelledby="simpleicons-googleplay-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-googleplay-icon">Google Play icon</title><path d="M1.22 0c-.03.093-.06.185-.06.308v23.229c0 .217.061.34.184.463l11.415-12.093L1.22 0zm12.309 12.708l2.951 3.045-4.213 2.4s-5.355 3.044-8.308 4.739l9.57-10.184zm.801-.831l3.166 3.292c.496-.276 4.371-2.492 4.924-2.8.584-.338.525-.8.029-1.046-.459-.255-4.334-2.475-4.92-2.835l-3.203 3.392.004-.003zm-.803-.8l2.984-3.169-4.259-2.431S5.309 1.505 2.999.179l10.53 10.898h-.002z"/></svg>
 									</a>
 								</li>
@@ -726,17 +748,21 @@
 							</svg>
 						</h2>
 					</a> 
+					<p id="about-p">
+						Alison Cohen is a Seattle-raised and Miami-based singer, songwriter, producer and multi-instrumentalist. She is currently studying in the Bruce Hornsby Creative American Music singer-songwriter program at the Frost School of Music, University of Miami. <br/><br/>
+
+						Her music blends the sounds of 80's synth pop with elements of today’s hit songs. She tells personal stories through visceral lyrics that paint colorful mental images. Alison’s sound can be compared to 80's artists such as Tears for Fears and the Eurythmics, as well as modern artists, such as Lorde, Dagny, SG Lewis and Clairo. <br/><br/>
+
+						Alison’s debut EP, Neon Girl, was released in November, 2018. She wrote, produced and played all tracks on the album. You can find the EP on all platforms.
+					</p>
+					
+					<h3> Alison's Background </h3>
+
 					<p>
-						Alison Cohen is a Seattle-born and Miami-based singer-songwriter, 
-						producer and multi-instrumentalist studying at the Frost School of Music at the 
-						University of Miami. <br><br>
+						Raised in a musical household and surrounded by a wide variety of music from a young age, Alison began singing almost before she could talk. She started playing classical piano at age 5, later learning guitar, bass and jazz piano. For the past 6 years, she has been writing songs and producing electronic music, shaped by the unique high school original composition music program at the Bush School under the tutelage of Jill Wangsgard. Alison has written over 40 songs across a variety of genres including pop, electro pop, ballad, rock, R&B, blues, country and singer-songwriter. She has performed for years at various venues in the US and Europe including cafés, open mics, parties and street fairs, both solo and with a band. <br/><br/>
 
-						Her music blends the sounds of 80s synth pop with elements of today’s hits. 
-						She tells personal stories through visceral lyrics that paint colorful mental images.
-						Alison’s sound can be compared to 80s artists such as Madonna and Tears for Fears 
-						as well as modern artists such as Lorde, SG Lewis and Clairo. <br><br>
+						Alison is influenced by many genres including 80’s alternative, pop music, New Wave, dream and bedroom pop, EDM, Motown, singer-songwriter, classical and jazz. Some of her favorite artists include Lorde, Taylor Swift, Ariana Grande, Sara Bareilles, San Holo, Prince, New Order, The Cure, Aretha Franklin, and Carole King.
 
-						Alison’s debut EP, Neon Girl, will be released in November 2018.
 								
 					</p>
 					<div id="about-images">
@@ -889,8 +915,18 @@
 		let $menuItems = document.getElementsByClassName("menu-item");
 		for (let $menuItem of $menuItems) {
 			$menuItem.addEventListener('click', hideMenu);
+
+		var bg = $("#home-image-container");
+
+		function resizeBackground() {
+    		bg.height( $(window).height() + 60);
+		}
+
+		$(window).resize(resizeBackground);
+		resizeBackground();
 		}
 	})();
 	</script>
+
 	</body>
 </html>

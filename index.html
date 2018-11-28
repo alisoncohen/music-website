@@ -11,7 +11,7 @@
   	gtag('config', 'UA-129417724-1');
 	</script>
 	<!-- END Global site tag (gtag.js) - Google Analytics -->
-	
+
 	<title> Alison Cohen - Neon Girl</title>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
@@ -142,7 +142,7 @@
 			width:20px;
 		}
 		#home{
-			overflow-x:hidden;
+			
 		}
 
 		#home-image-container{
@@ -235,6 +235,7 @@
 			max-width:960px;
 			min-width:540px;
 			min-height: 100vh;
+			overflow-x:hidden;
 		}
 		#music{
 			background:#eee;
@@ -378,16 +379,16 @@
 		}
 
 		@supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
-			.xparallax {
+			.parallax {
 				perspective: 1px;
 				height: 100vh;
 				overflow-x: hidden;
 				overflow-y: auto;
 			}
-			.xparallax__layer--base {
+			.parallax__layer--base {
 				transform: translateZ(0px);
 			}
-			.xparallax__layer--back {
+			.parallax__layer--back {
 				transform: translateZ(-1px) scale(2);
 			}
 		}
